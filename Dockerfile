@@ -27,7 +27,8 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY app.rb config.ru ./
-COPY lib views ./
+COPY lib/ ./lib/
+COPY views/ ./views/
 # Final stage for app image
 FROM base
 
